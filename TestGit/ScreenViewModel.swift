@@ -1,64 +1,68 @@
 import Foundation
 
 class ScreenViewModel: ObservableObject {
-  @Published var loadingState: LoadingState = .idle
+  @Published var loadingState: LoadingState<DisplayModel?> = .idle
   
   let displayModel: DisplayModel = DisplayModel(id: "1234", name: "anyName")
   
-  func onAppear() {
-    loadingState = .loading(DisplayModel.placeholder)
-    loadData()
+  func onAppear() async {
+    loadingState = .loading(displayModel)
+    try? await loadData()
   }
   
-  func loadData() {
+  @MainActor
+  func loadData() async throws {
     do {
-      if let displayModel = try getUseCase() {
-        loadingState = .loaded(displayModel)
+      if let model = try await getUseCase() {
+        loadingState = .loaded(model)
+      } else {
+        loadingState = .loaded(nil)
       }
     } catch {
-      loadingState = .failed(ScreenError.networkError("Network Error"))
+      loadingState = .failed(ScreenError.someError("Some error"))
     }
   }
-  
-  func getUseCase() throws -> DisplayModel? {
-//    let randomInt = Int.random(in: 0...1)
-      
-    let randomInt = 0
+
+  @MainActor
+  func getUseCase() async throws -> DisplayModel? {
+    try await Task.sleep(for: .seconds(1))
+    
+    let randomInt = Int.random(in: 0...1)
     
     switch randomInt {
       case 0:
-      loadingState = .failed(ScreenError.networkError("Loading failed"))
-      throw ScreenError.networkError("Error")
+      loadingState = .failed(ScreenError.someError("Loading failed"))
+        throw ScreenError.someError("Loading failed")
       case 1:
+        loadingState = .loading(displayModel)
+      case 2:
         loadingState = .loaded(displayModel)
       default:
         break
       }
-    
-    print("randomInt: \(randomInt)")
-    
     return displayModel
   }
 }
 
 
 extension ScreenViewModel {
-  enum LoadingState {
+  enum LoadingState<DisplayModel> {
     case idle
     case loading(DisplayModel)
     case loaded(DisplayModel)
     case failed(ScreenError)
   }
-}
 
-
-enum ScreenError: Error {
-  case networkError(String)
-}
-
-struct DisplayModel {
-  let id: String
-  let name: String
+  enum ScreenError: Error {
+    case someError(String)
+  }
   
-  static var placeholder = DisplayModel(id: "anyId", name: "anyName")
+  struct DisplayModel: Equatable {
+    let id: String
+    let name: String
+    
+    static var placeholder = DisplayModel(id: "anyId", name: "anyName")
+  }
 }
+
+
