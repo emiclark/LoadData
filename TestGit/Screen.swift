@@ -14,9 +14,9 @@ struct Screen: View {
       switch viewModel.loadingState {
       case .idle:
         idleView
-      case .loading(let displayModel):
+      case .loading:
         isLoadingView
-      case .loaded(let displayModel):
+      case .loaded:
         contentView
       case .failed(let error):
         VStack {
@@ -31,11 +31,15 @@ struct Screen: View {
       Spacer()
       Button("Refresh loading state") {
         Task {
-          try! await viewModel.loadData()
+          await viewModel.onAppear()
         }
       }
       footer
     }
+    .task {
+      await viewModel.onAppear()
+    }
+    
   }
   
   @ViewBuilder
