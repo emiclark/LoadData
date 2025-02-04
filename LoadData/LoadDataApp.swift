@@ -4,7 +4,7 @@ import SwiftUI
 struct TestGitApp: App {
     var body: some Scene {
         WindowGroup {
-          Screen(viewModel: ScreenViewModel())
+          MainScreen(viewModel: MainScreenViewModel())
         }
     }
 }
