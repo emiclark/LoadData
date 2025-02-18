@@ -17,10 +17,10 @@ struct MainScreen: View {
         MainIdleView()
       case .loading:
         MainLoadingView()
-      case .loaded:
-        MainContentView()
-      case .failed(let error):
-        MainErrorView(error: error)
+      case .loaded(let mainDisplayModel):
+        MainContentView(id: mainDisplayModel.id, name: mainDisplayModel.name)
+      case .failed(let errorMessage):
+        MainErrorView(errorMessage: errorMessage)
       }
       
       Spacer()

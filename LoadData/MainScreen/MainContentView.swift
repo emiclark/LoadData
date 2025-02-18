@@ -1,9 +1,13 @@
 import SwiftUI
 
 struct MainContentView: View {
+  let id: String
+  let name: String
+  
   var body: some View {
     VStack {
-      Text("Hello, World!!!!")
+      Text("Data loaded")
+      Text("id: \(id), name: \(name)")
     }
     .font(.body)
     .padding(.top, 20)
@@ -14,5 +18,5 @@ struct MainContentView: View {
 }
 
 #Preview {
-    MainContentView()
+  MainContentView(id: "123", name: "anyName")
 }

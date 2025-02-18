@@ -34,8 +34,9 @@ private extension MainScreenViewModel {
       if let model = try await getUseCase() {
         loadingState = .loaded(model)
       }
-    } catch is MainScreenViewModel.MainScreenError {
-      loadingState = .failed(MainScreenViewModel.MainScreenError.mappingError)
+    } catch let error as MainScreenError {
+      print("MainScreenError: \(error)")
+      loadingState = .failed(error.description)
     } catch let error {
       throw error
     }
@@ -45,9 +46,9 @@ private extension MainScreenViewModel {
 extension MainScreenViewModel {
   enum LoadingState<MainDisplayModel> {
     case idle
+    case failed(String)
     case loading(MainDisplayModel)
     case loaded(MainDisplayModel)
-    case failed(MainScreenError)
   }
 
   enum MainScreenError: Error, CustomStringConvertible {

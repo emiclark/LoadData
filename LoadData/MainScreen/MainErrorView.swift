@@ -1,11 +1,11 @@
 import SwiftUI
 
 struct MainErrorView: View {
-  let error: MainScreenViewModel.MainScreenError
+  let errorMessage: String
   
   var body: some View {
     VStack {
-      Text("\(error.localizedDescription)")
+      Text("Error: \(errorMessage)")
     }
     .padding(20)
     .frame(width: 300, height: 400)
@@ -14,6 +14,6 @@ struct MainErrorView: View {
 }
 
 #Preview {
-  MainErrorView(error: MainScreenViewModel.MainScreenError.mappingError)
+  MainErrorView(errorMessage: "Error")
 }
 
