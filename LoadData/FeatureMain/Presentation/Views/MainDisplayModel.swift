@@ -1,8 +1,14 @@
 import Foundation
 
-struct MainDisplayModel: Equatable {
-  let id: String
-  let name: String
-  
-  static var placeholder = MainDisplayModel(id: "anyId", name: "anyName")
+struct MainDisplayModel: Decodable {
+  let quote: String
+  let author: String
+  let category: String
+}
+
+
+struct Quote: Decodable {
+  let quote: String
+  let author: String
+  let category: String
 }

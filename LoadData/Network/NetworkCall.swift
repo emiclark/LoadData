@@ -1,6 +1,12 @@
 import Foundation
 
 protocol NetworkCallable {
-  func execute(from url: String, urlSession: URLSession) async throws -> (Data?, HTTPURLResponse?)
+  static func execute(for request: URLRequest) async throws -> (Data?, HTTPURLResponse?)
 }
 
+struct NetworkCall: NetworkCallable {
+  static func execute(for request: URLRequest) async throws -> (Data?, HTTPURLResponse?) {
+    let (data, response) = try await URLSession.shared.data(for: request)
+    return (data, response as? HTTPURLResponse)
+  }
+}

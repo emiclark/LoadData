@@ -2,26 +2,17 @@ import Foundation
 
 class MainScreenViewModel: ObservableObject {
   @Published var loadingState: LoadingState<MainDisplayModel> = .idle
-  
-  let displayModel: MainDisplayModel = MainDisplayModel(id: "1234", name: "anyName")
+
+  private let getQuoteUseCase: GetQuoteUseCase
+  var displayModel: MainDisplayModel
+
+  init(getQuoteUseCase: GetQuoteUseCase, displayModel: MainDisplayModel) {
+    self.getQuoteUseCase = getQuoteUseCase
+    self.displayModel = displayModel
+  }
   
   func onAppear() async {
     try? await loadData()
-  }
-
-  func getUseCase() async throws -> MainDisplayModel? {
-    try await Task.sleep(for: .seconds(1))
-    
-    let randomInt = Int.random(in: 0...2)
-    
-    switch randomInt {
-      case 0:
-        throw MainScreenError.networkError
-      case 1:
-        throw MainScreenError.mappingError
-      default:
-        return displayModel
-      }
   }
 }
 
@@ -31,14 +22,24 @@ private extension MainScreenViewModel {
     loadingState = .loading(displayModel)
 
     do {
-      if let model = try await getUseCase() {
-        loadingState = .loaded(model)
-      }
+      let model = try await getQuoteUseCase.getQuote()
+      displayModel = try map(from: model)
+      loadingState = .loaded(displayModel)
     } catch is MainScreenViewModel.MainScreenError {
       loadingState = .failed(MainScreenViewModel.MainScreenError.mappingError)
     } catch let error {
       throw error
     }
+  }
+}
+
+extension MainScreenViewModel {
+  func map(from source: QuoteModel) throws -> MainDisplayModel {
+    guard let result = source.quote.first
+    else {
+      throw MappingError.toDisplayModel
+    }
+    return MainDisplayModel(quote: result.quote , author: result.author, category: result.category)
   }
 }
 

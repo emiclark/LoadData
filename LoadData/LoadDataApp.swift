@@ -4,7 +4,16 @@ import SwiftUI
 struct TestGitApp: App {
     var body: some Scene {
         WindowGroup {
-          MainScreen(viewModel: MainScreenViewModel())
+          MainScreen(
+            viewModel: MainScreenViewModel(
+              getQuoteUseCase: GetQuoteUseCase(
+                getQuoteRepository: GetQuoteRepository(
+                  dataSource: GetQuoteDataSource()
+                )
+              ),
+              displayModel: MainDisplayModel(quote: "aQuote", author: "aAuthor", category: "aCategory")
+            )
+          )
         }
     }
 }

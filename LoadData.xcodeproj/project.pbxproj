@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D64DC4852D870EC00044E868 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DC4842D870EC00044E868 /* DetailScreen.swift */; };
-		D64DC4872D870F890044E868 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DC4862D870F890044E868 /* DetailViewModel.swift */; };
+		D60681C02D8750B300B2B098 /* GetQuoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681BF2D8750B300B2B098 /* GetQuoteUseCase.swift */; };
+		D60681C22D8750E900B2B098 /* QuoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C12D8750E800B2B098 /* QuoteRepository.swift */; };
+		D60681C42D87513500B2B098 /* GetQuoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C32D87513500B2B098 /* GetQuoteDataSource.swift */; };
+		D60681C62D8761C700B2B098 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C52D8761C700B2B098 /* Errors.swift */; };
+		D60681C82D87635000B2B098 /* QuoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C72D87633F00B2B098 /* QuoteEntity.swift */; };
+		D60681CA2D87646F00B2B098 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C92D87646F00B2B098 /* QuoteModel.swift */; };
+		D60681CC2D8766C300B2B098 /* QuoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681CB2D8766C300B2B098 /* QuoteData.swift */; };
 		D6EC42FB2D74A168007F6A79 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC42ED2D74A168007F6A79 /* MainContentView.swift */; };
 		D6EC42FC2D74A168007F6A79 /* MainDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC42EE2D74A168007F6A79 /* MainDisplayModel.swift */; };
 		D6EC42FD2D74A168007F6A79 /* MainErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC42EF2D74A168007F6A79 /* MainErrorView.swift */; };
@@ -24,9 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D60681BF2D8750B300B2B098 /* GetQuoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetQuoteUseCase.swift; sourceTree = "<group>"; };
+		D60681C12D8750E800B2B098 /* QuoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRepository.swift; sourceTree = "<group>"; };
+		D60681C32D87513500B2B098 /* GetQuoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetQuoteDataSource.swift; sourceTree = "<group>"; };
+		D60681C52D8761C700B2B098 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		D60681C72D87633F00B2B098 /* QuoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteEntity.swift; sourceTree = "<group>"; };
+		D60681C92D87646F00B2B098 /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
+		D60681CB2D8766C300B2B098 /* QuoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteData.swift; sourceTree = "<group>"; };
 		D61A4CDE2D4678C3004263A1 /* LoadData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadData.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D64DC4842D870EC00044E868 /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
-		D64DC4862D870F890044E868 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		D6EC42ED2D74A168007F6A79 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		D6EC42EE2D74A168007F6A79 /* MainDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDisplayModel.swift; sourceTree = "<group>"; };
 		D6EC42EF2D74A168007F6A79 /* MainErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainErrorView.swift; sourceTree = "<group>"; };
@@ -92,6 +102,7 @@
 		D6EC42FA2D74A168007F6A79 /* LoadData */ = {
 			isa = PBXGroup;
 			children = (
+				D60681C52D8761C700B2B098 /* Errors.swift */,
 				D6EC430F2D74A276007F6A79 /* Network */,
 				D6EC430D2D74A1F1007F6A79 /* Endpoint.swift */,
 				D6EC43052D74A16B007F6A79 /* DomainMain */,
@@ -130,8 +141,7 @@
 				D6EC42F32D74A168007F6A79 /* MainScreenViewModel.swift */,
 				D6EC42F42D74A168007F6A79 /* Views */,
 				D6EC430B2D74A1D7007F6A79 /* Usecase */,
-				D64DC4842D870EC00044E868 /* DetailScreen.swift */,
-				D64DC4862D870F890044E868 /* DetailViewModel.swift */,
+				D60681C92D87646F00B2B098 /* QuoteModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -139,6 +149,7 @@
 		D6EC43082D74A1B9007F6A79 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D60681CB2D8766C300B2B098 /* QuoteData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -146,6 +157,7 @@
 		D6EC43092D74A1C3007F6A79 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D60681C72D87633F00B2B098 /* QuoteEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -153,6 +165,7 @@
 		D6EC430A2D74A1CB007F6A79 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				D60681C12D8750E800B2B098 /* QuoteRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -160,6 +173,7 @@
 		D6EC430B2D74A1D7007F6A79 /* Usecase */ = {
 			isa = PBXGroup;
 			children = (
+				D60681BF2D8750B300B2B098 /* GetQuoteUseCase.swift */,
 			);
 			path = Usecase;
 			sourceTree = "<group>";
@@ -167,6 +181,7 @@
 		D6EC430C2D74A1E8007F6A79 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				D60681C32D87513500B2B098 /* GetQuoteDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -252,17 +267,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60681CA2D87646F00B2B098 /* QuoteModel.swift in Sources */,
 				D6EC42FB2D74A168007F6A79 /* MainContentView.swift in Sources */,
 				D6EC430E2D74A1FA007F6A79 /* Endpoint.swift in Sources */,
 				D6EC42FC2D74A168007F6A79 /* MainDisplayModel.swift in Sources */,
 				D6EC42FD2D74A168007F6A79 /* MainErrorView.swift in Sources */,
+				D60681CC2D8766C300B2B098 /* QuoteData.swift in Sources */,
+				D60681C42D87513500B2B098 /* GetQuoteDataSource.swift in Sources */,
 				D6EC43112D74A285007F6A79 /* NetworkCall.swift in Sources */,
+				D60681C82D87635000B2B098 /* QuoteEntity.swift in Sources */,
+				D60681C62D8761C700B2B098 /* Errors.swift in Sources */,
 				D6EC42FE2D74A168007F6A79 /* MainIdleView.swift in Sources */,
+				D60681C22D8750E900B2B098 /* QuoteRepository.swift in Sources */,
 				D6EC42FF2D74A168007F6A79 /* MainLoadingView.swift in Sources */,
-				D64DC4872D870F890044E868 /* DetailViewModel.swift in Sources */,
 				D6EC43002D74A168007F6A79 /* MainScreen.swift in Sources */,
 				D6EC43012D74A168007F6A79 /* MainScreenViewModel.swift in Sources */,
-				D64DC4852D870EC00044E868 /* DetailScreen.swift in Sources */,
+				D60681C02D8750B300B2B098 /* GetQuoteUseCase.swift in Sources */,
 				D6EC43022D74A168007F6A79 /* LoadDataApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

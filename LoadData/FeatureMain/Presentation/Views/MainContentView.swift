@@ -1,18 +1,26 @@
 import SwiftUI
 
 struct MainContentView: View {
+  let quote: String
+  let author: String
+  let category: String
+  
   var body: some View {
-    VStack {
-      Text("Hello, World!!!!")
+    VStack(alignment: .leading) {
+      Text(quote)
+        .font(.body)
+      +
+      Text(" ~ \(author)")
+        .fontWeight(.light)
+        .italic()
     }
-    .font(.body)
-    .padding(.top, 20)
-    .frame(width: 300, height: 400)
+    .padding(20)
+    .frame(width: 300, height: 300)
     .foregroundColor(.white)
     .background(Color.green)
   }
 }
 
 #Preview {
-    MainContentView()
+  MainContentView(quote: "aQuote", author: "aAuthor", category: "aCategory")
 }
