@@ -31,9 +31,9 @@ struct MainScreen: View {
       }
       footer
     }
-//    .task {
-//      await viewModel.onAppear()
-//    }
+    //    .task {
+    //      await viewModel.onAppear()
+    //    }
   }
   
   var header: some View {
