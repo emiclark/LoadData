@@ -14,6 +14,7 @@
 		D60681C82D87635000B2B098 /* QuoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C72D87633F00B2B098 /* QuoteEntity.swift */; };
 		D60681CA2D87646F00B2B098 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C92D87646F00B2B098 /* QuoteModel.swift */; };
 		D60681CC2D8766C300B2B098 /* QuoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681CB2D8766C300B2B098 /* QuoteData.swift */; };
+		D60681E92D88ECFA00B2B098 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681E82D88ECFA00B2B098 /* JSONDecodable.swift */; };
 		D6EC42FB2D74A168007F6A79 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC42ED2D74A168007F6A79 /* MainContentView.swift */; };
 		D6EC42FC2D74A168007F6A79 /* MainDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC42EE2D74A168007F6A79 /* MainDisplayModel.swift */; };
 		D6EC42FD2D74A168007F6A79 /* MainErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC42EF2D74A168007F6A79 /* MainErrorView.swift */; };
@@ -36,6 +37,7 @@
 		D60681C72D87633F00B2B098 /* QuoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteEntity.swift; sourceTree = "<group>"; };
 		D60681C92D87646F00B2B098 /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 		D60681CB2D8766C300B2B098 /* QuoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteData.swift; sourceTree = "<group>"; };
+		D60681E82D88ECFA00B2B098 /* JSONDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 		D61A4CDE2D4678C3004263A1 /* LoadData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EC42ED2D74A168007F6A79 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		D6EC42EE2D74A168007F6A79 /* MainDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDisplayModel.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				D6EC430A2D74A1CB007F6A79 /* Repository */,
 				D6EC43092D74A1C3007F6A79 /* Entity */,
 				D6EC43082D74A1B9007F6A79 /* Data */,
+				D60681E82D88ECFA00B2B098 /* JSONDecodable.swift */,
 			);
 			path = DomainMain;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				D60681C42D87513500B2B098 /* GetQuoteDataSource.swift in Sources */,
 				D6EC43112D74A285007F6A79 /* NetworkCall.swift in Sources */,
 				D60681C82D87635000B2B098 /* QuoteEntity.swift in Sources */,
+				D60681E92D88ECFA00B2B098 /* JSONDecodable.swift in Sources */,
 				D60681C62D8761C700B2B098 /* Errors.swift in Sources */,
 				D6EC42FE2D74A168007F6A79 /* MainIdleView.swift in Sources */,
 				D60681C22D8750E900B2B098 /* QuoteRepository.swift in Sources */,

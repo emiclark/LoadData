@@ -1,6 +1,13 @@
 import Foundation
 
 class GetQuoteDataSource {
+  private let networkCall: NetworkCallable
+  private let jsonDecoder: JSONDecodable
+  
+  init(networkCall: NetworkCallable, jsonDecoder: JSONDecodable) {
+    self.networkCall = networkCall
+    self.jsonDecoder = jsonDecoder
+  }
   
   func getQuote() async throws -> QuoteData {
     // check valid url
