@@ -24,7 +24,8 @@ class GetQuoteDataSource {
     request.setValue("application/json", forHTTPHeaderField: "Content-type")
     request.setValue("fEykI/K4HRP/YqUU9u0wTQ==pdiDrwD0s5LvUxkv", forHTTPHeaderField: "X-Api-Key")
     
-    let (data, httpURLResponse) = try await NetworkCall.execute(for: request)
+    let networkCall = NetworkCall(urlSession: URLSession.shared)
+    let (data, httpURLResponse) = try await networkCall.execute(for: request)
     
     // check for valid response
     guard let data,
