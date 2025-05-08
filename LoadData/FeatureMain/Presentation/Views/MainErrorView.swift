@@ -8,7 +8,7 @@ struct MainErrorView: View {
       Text("\(error.localizedDescription)")
     }
     .padding(20)
-    .frame(width: 300, height: 400)
+    .frame(width: 300, height: 300)
     .foregroundColor(.white)
     .background(Color.red)  }
 }
