@@ -1,14 +1,23 @@
 import Foundation
 
-struct MainDisplayModel: Decodable {
-  let quote: String
-  let author: String
-  let category: String
+struct MainDisplayModel {
+  let id = UUID()
+  let artistName: String
 }
 
+//struct MainDisplayModel {
+//  let id = UUID()
+//  let kind: Kind
+//  let artistID: Int?
+//  let collectionID: Int?
+//  let trackID: Int
+//  let artistName: String
+//  let collectionName: String?
+//  let trackName: String
+//  let country: Country
+//  let primaryGenreName: String
+//  let shortDescription: String?
+//  let longDescription: String?
+//  let collectionArtistName: String?
+//}
 
-struct Quote: Decodable {
-  let quote: String
-  let author: String
-  let category: String
-}

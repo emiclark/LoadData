@@ -6,17 +6,30 @@ struct TestGitApp: App {
         WindowGroup {
           MainScreen(
             viewModel: MainScreenViewModel(
-              getQuoteUseCase: GetQuoteUseCase(
-                getQuoteRepository: GetQuoteRepository(
-                  dataSource: GetQuoteDataSource(
+              getArtistUseCase: GetArtistUseCase(
+                getArtistRepository: GetArtistRepository(
+                  dataSource: GetArtistDataSource(
                     networkCall: NetworkCall(urlSession: URLSession.shared),
                     jsonDecoder: JSONDecoder()
                   )
                 )
               ),
-              displayModel: MainDisplayModel(quote: "aQuote", author: "aAuthor", category: "aCategory")
+              displayModel: MainDisplayModel(
+//                kind: Kind.featureMovie,
+//                artistID: 001,
+//                collectionID: 0011,
+//                trackID: 111,
+                artistName: "artist name"
+//                collectionName: "collection name",
+//                trackName: "Track name",
+//                country: Country.usa,
+//                primaryGenreName: "primary genre name",
+//                shortDescription: "short description",
+//                longDescription: "long description",
+//                collectionArtistName: "collection artist name"
+              )
             )
-          )
-        }
+        )
+      }
     }
 }

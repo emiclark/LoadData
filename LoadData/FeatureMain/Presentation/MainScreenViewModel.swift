@@ -1,13 +1,18 @@
 import Foundation
+import SwiftUI
 
 class MainScreenViewModel: ObservableObject {
   @Published var loadingState: LoadingState<MainDisplayModel> = .idle
-
-  private let getQuoteUseCase: GetQuoteUseCase
-  var displayModel: MainDisplayModel
-
-  init(getQuoteUseCase: GetQuoteUseCase, displayModel: MainDisplayModel) {
-    self.getQuoteUseCase = getQuoteUseCase
+  @Published var displayModel: MainDisplayModel
+  var displayModelItems: [MainDisplayModel] = []
+  
+  private let getArtistUseCase: GetArtistUseCase
+  
+  init(
+    getArtistUseCase: GetArtistUseCase,
+    displayModel: MainDisplayModel
+  ) {
+    self.getArtistUseCase = getArtistUseCase
     self.displayModel = displayModel
   }
   
@@ -22,8 +27,8 @@ private extension MainScreenViewModel {
     loadingState = .loading(displayModel)
 
     do {
-      let model = try await getQuoteUseCase.getQuote()
-      displayModel = try map(from: model)
+      let model = try await getArtistUseCase.getArtist()
+      displayModelItems = try map(from: model)
       loadingState = .loaded(displayModel)
     } catch is MainScreenViewModel.MainScreenError {
       loadingState = .failed(MainScreenViewModel.MainScreenError.mappingError)
@@ -34,20 +39,24 @@ private extension MainScreenViewModel {
 }
 
 extension MainScreenViewModel {
-  func map(from source: QuoteModel) throws -> MainDisplayModel {
-    guard let result = source.quote.first
-    else {
-      throw MappingError.toDisplayModel
+  func map(from source: ArtistModel) throws -> [MainDisplayModel] {
+    var displayModelItems: [MainDisplayModel] = []
+    
+    for artist in source.artists {
+      let mainDisplayModel = MainDisplayModel(
+        artistName: artist.artistName
+      )
+      displayModelItems.append(mainDisplayModel)
     }
-    return MainDisplayModel(quote: result.quote , author: result.author, category: result.category)
+    return displayModelItems
   }
 }
 
 extension MainScreenViewModel {
-  enum LoadingState<MainDisplayModel> {
+  enum LoadingState<MainDisplayModelItems> {
     case idle
-    case loading(MainDisplayModel)
-    case loaded(MainDisplayModel)
+    case loading(MainDisplayModelItems)
+    case loaded(MainDisplayModelItems)
     case failed(MainScreenError)
   }
 
@@ -67,3 +76,28 @@ extension MainScreenViewModel {
 }
 
 
+// old
+//extension MainScreenViewModel {
+//  func map(from source: ArtistModel) throws -> [MainDisplayModel] {
+//    var displayModelItems: [MainDisplayModel] = []
+//    
+//    for artist in source.artists {
+//      let mainDisplayModel = MainDisplayModel(
+//        kind: artist.kind,
+//        artistID: artist.artistID,
+//        collectionID: artist.collectionID,
+//        trackID: artist.trackID,
+//        artistName: artist.artistName,
+//        collectionName: artist.collectionName,
+//        trackName: artist.trackName,
+//        country: artist.country,
+//        primaryGenreName: artist.primaryGenreName,
+//        shortDescription: artist.shortDescription,
+//        longDescription: artist.longDescription,
+//        collectionArtistName: artist.collectionName
+//      )
+//      displayModelItems.append(mainDisplayModel)
+//    }
+//    return displayModelItems
+//  }
+//}

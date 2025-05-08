@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D60681C02D8750B300B2B098 /* GetQuoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681BF2D8750B300B2B098 /* GetQuoteUseCase.swift */; };
-		D60681C22D8750E900B2B098 /* QuoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C12D8750E800B2B098 /* QuoteRepository.swift */; };
-		D60681C42D87513500B2B098 /* GetQuoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C32D87513500B2B098 /* GetQuoteDataSource.swift */; };
+		D60681C02D8750B300B2B098 /* GetArtistUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681BF2D8750B300B2B098 /* GetArtistUseCase.swift */; };
+		D60681C22D8750E900B2B098 /* GetArtistRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C12D8750E800B2B098 /* GetArtistRepository.swift */; };
+		D60681C42D87513500B2B098 /* GetArtistDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C32D87513500B2B098 /* GetArtistDataSource.swift */; };
 		D60681C62D8761C700B2B098 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C52D8761C700B2B098 /* Errors.swift */; };
-		D60681C82D87635000B2B098 /* QuoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C72D87633F00B2B098 /* QuoteEntity.swift */; };
-		D60681CA2D87646F00B2B098 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C92D87646F00B2B098 /* QuoteModel.swift */; };
-		D60681CC2D8766C300B2B098 /* QuoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681CB2D8766C300B2B098 /* QuoteData.swift */; };
+		D60681C82D87635000B2B098 /* ArtistEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C72D87633F00B2B098 /* ArtistEntity.swift */; };
+		D60681CA2D87646F00B2B098 /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681C92D87646F00B2B098 /* ArtistModel.swift */; };
+		D60681CC2D8766C300B2B098 /* ArtistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681CB2D8766C300B2B098 /* ArtistData.swift */; };
 		D60681E92D88ECFA00B2B098 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60681E82D88ECFA00B2B098 /* JSONDecodable.swift */; };
 		D6EC42FB2D74A168007F6A79 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC42ED2D74A168007F6A79 /* MainContentView.swift */; };
 		D6EC42FC2D74A168007F6A79 /* MainDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC42EE2D74A168007F6A79 /* MainDisplayModel.swift */; };
@@ -27,16 +27,17 @@
 		D6EC43042D74A168007F6A79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6EC42F72D74A168007F6A79 /* Assets.xcassets */; };
 		D6EC430E2D74A1FA007F6A79 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC430D2D74A1F1007F6A79 /* Endpoint.swift */; };
 		D6EC43112D74A285007F6A79 /* NetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC43102D74A27E007F6A79 /* NetworkCall.swift */; };
+		D6FBE2102DCD173E005EE32B /* Artists.json in Resources */ = {isa = PBXBuildFile; fileRef = D6FBE20F2DCD1730005EE32B /* Artists.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D60681BF2D8750B300B2B098 /* GetQuoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetQuoteUseCase.swift; sourceTree = "<group>"; };
-		D60681C12D8750E800B2B098 /* QuoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRepository.swift; sourceTree = "<group>"; };
-		D60681C32D87513500B2B098 /* GetQuoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetQuoteDataSource.swift; sourceTree = "<group>"; };
+		D60681BF2D8750B300B2B098 /* GetArtistUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArtistUseCase.swift; sourceTree = "<group>"; };
+		D60681C12D8750E800B2B098 /* GetArtistRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArtistRepository.swift; sourceTree = "<group>"; };
+		D60681C32D87513500B2B098 /* GetArtistDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArtistDataSource.swift; sourceTree = "<group>"; };
 		D60681C52D8761C700B2B098 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		D60681C72D87633F00B2B098 /* QuoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteEntity.swift; sourceTree = "<group>"; };
-		D60681C92D87646F00B2B098 /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
-		D60681CB2D8766C300B2B098 /* QuoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteData.swift; sourceTree = "<group>"; };
+		D60681C72D87633F00B2B098 /* ArtistEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistEntity.swift; sourceTree = "<group>"; };
+		D60681C92D87646F00B2B098 /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
+		D60681CB2D8766C300B2B098 /* ArtistData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistData.swift; sourceTree = "<group>"; };
 		D60681E82D88ECFA00B2B098 /* JSONDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 		D61A4CDE2D4678C3004263A1 /* LoadData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EC42ED2D74A168007F6A79 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +53,8 @@
 		D6EC42F92D74A168007F6A79 /* LoadDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataApp.swift; sourceTree = "<group>"; };
 		D6EC430D2D74A1F1007F6A79 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		D6EC43102D74A27E007F6A79 /* NetworkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCall.swift; sourceTree = "<group>"; };
+		D6FBE20E2DC91908005EE32B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D6FBE20F2DCD1730005EE32B /* Artists.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artists.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		D6EC42FA2D74A168007F6A79 /* LoadData */ = {
 			isa = PBXGroup;
 			children = (
+				D6FBE20E2DC91908005EE32B /* Info.plist */,
 				D60681C52D8761C700B2B098 /* Errors.swift */,
 				D6EC430F2D74A276007F6A79 /* Network */,
 				D6EC430D2D74A1F1007F6A79 /* Endpoint.swift */,
@@ -144,7 +148,7 @@
 				D6EC42F32D74A168007F6A79 /* MainScreenViewModel.swift */,
 				D6EC42F42D74A168007F6A79 /* Views */,
 				D6EC430B2D74A1D7007F6A79 /* Usecase */,
-				D60681C92D87646F00B2B098 /* QuoteModel.swift */,
+				D60681C92D87646F00B2B098 /* ArtistModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -152,7 +156,7 @@
 		D6EC43082D74A1B9007F6A79 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				D60681CB2D8766C300B2B098 /* QuoteData.swift */,
+				D60681CB2D8766C300B2B098 /* ArtistData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -160,7 +164,7 @@
 		D6EC43092D74A1C3007F6A79 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				D60681C72D87633F00B2B098 /* QuoteEntity.swift */,
+				D60681C72D87633F00B2B098 /* ArtistEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -168,7 +172,7 @@
 		D6EC430A2D74A1CB007F6A79 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				D60681C12D8750E800B2B098 /* QuoteRepository.swift */,
+				D60681C12D8750E800B2B098 /* GetArtistRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -176,7 +180,7 @@
 		D6EC430B2D74A1D7007F6A79 /* Usecase */ = {
 			isa = PBXGroup;
 			children = (
-				D60681BF2D8750B300B2B098 /* GetQuoteUseCase.swift */,
+				D60681BF2D8750B300B2B098 /* GetArtistUseCase.swift */,
 			);
 			path = Usecase;
 			sourceTree = "<group>";
@@ -184,7 +188,8 @@
 		D6EC430C2D74A1E8007F6A79 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				D60681C32D87513500B2B098 /* GetQuoteDataSource.swift */,
+				D6FBE20F2DCD1730005EE32B /* Artists.json */,
+				D60681C32D87513500B2B098 /* GetArtistDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6EC43032D74A168007F6A79 /* Preview Assets.xcassets in Resources */,
+				D6FBE2102DCD173E005EE32B /* Artists.json in Resources */,
 				D6EC43042D74A168007F6A79 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,23 +276,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D60681CA2D87646F00B2B098 /* QuoteModel.swift in Sources */,
+				D60681CA2D87646F00B2B098 /* ArtistModel.swift in Sources */,
 				D6EC42FB2D74A168007F6A79 /* MainContentView.swift in Sources */,
 				D6EC430E2D74A1FA007F6A79 /* Endpoint.swift in Sources */,
 				D6EC42FC2D74A168007F6A79 /* MainDisplayModel.swift in Sources */,
 				D6EC42FD2D74A168007F6A79 /* MainErrorView.swift in Sources */,
-				D60681CC2D8766C300B2B098 /* QuoteData.swift in Sources */,
-				D60681C42D87513500B2B098 /* GetQuoteDataSource.swift in Sources */,
+				D60681CC2D8766C300B2B098 /* ArtistData.swift in Sources */,
+				D60681C42D87513500B2B098 /* GetArtistDataSource.swift in Sources */,
 				D6EC43112D74A285007F6A79 /* NetworkCall.swift in Sources */,
-				D60681C82D87635000B2B098 /* QuoteEntity.swift in Sources */,
+				D60681C82D87635000B2B098 /* ArtistEntity.swift in Sources */,
 				D60681E92D88ECFA00B2B098 /* JSONDecodable.swift in Sources */,
 				D60681C62D8761C700B2B098 /* Errors.swift in Sources */,
 				D6EC42FE2D74A168007F6A79 /* MainIdleView.swift in Sources */,
-				D60681C22D8750E900B2B098 /* QuoteRepository.swift in Sources */,
+				D60681C22D8750E900B2B098 /* GetArtistRepository.swift in Sources */,
 				D6EC42FF2D74A168007F6A79 /* MainLoadingView.swift in Sources */,
 				D6EC43002D74A168007F6A79 /* MainScreen.swift in Sources */,
 				D6EC43012D74A168007F6A79 /* MainScreenViewModel.swift in Sources */,
-				D60681C02D8750B300B2B098 /* GetQuoteUseCase.swift in Sources */,
+				D60681C02D8750B300B2B098 /* GetArtistUseCase.swift in Sources */,
 				D6EC43022D74A168007F6A79 /* LoadDataApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +427,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LoadData/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -460,6 +467,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LoadData/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

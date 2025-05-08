@@ -5,13 +5,19 @@ enum NetworkError: Error {
   case invalidURLRequest
   case invalidResponse
   case noData
-  case decodingFailed
 }
 
 enum UseCaseError: Error {
   case invalidResponseForQuoteModel
 }
 
+enum DecodingError: Error {
+  case decodingFailed
+}
+
 enum MappingError: Error {
- case toDisplayModel
+  case toDisplayModelFailed
+  case DataToEntityFailed
+  case EntityToModelFailed
+  case ModelToDisplayModelFailed
 }

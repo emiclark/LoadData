@@ -17,7 +17,20 @@ struct MainScreen: View {
       case .loading:
         MainLoadingView()
       case .loaded:
-        MainContentView(quote: viewModel.displayModel.quote, author: viewModel.displayModel.author, category: viewModel.displayModel.category)
+        MainContentView(
+          viewModel: MainScreenViewModel(
+            getArtistUseCase: GetArtistUseCase(
+              getArtistRepository: GetArtistRepository(
+                dataSource: GetArtistDataSource(
+                  networkCall: NetworkCall(urlSession: URLSession()),
+                  jsonDecoder: JSONDecoder()
+                )
+              )
+            ),
+            displayModel: viewModel.displayModel
+          ),
+          displayModelItems: viewModel.displayModelItems
+        )
       case .failed(let error):
         MainErrorView(error: error)
       }
@@ -35,7 +48,7 @@ struct MainScreen: View {
   }
   
   var header: some View {
-    Text("A quote for \(viewModel.displayModel.category)")
+    Text("Artists")
       .font(.headline)
       .padding(20)
   }
