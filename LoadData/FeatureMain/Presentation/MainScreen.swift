@@ -10,7 +10,6 @@ struct MainScreen: View {
   var body: some View {
     VStack {
       header
-      Spacer()
       
       switch viewModel.loadingState {
       case .idle:
@@ -18,7 +17,7 @@ struct MainScreen: View {
       case .loading:
         MainLoadingView()
       case .loaded:
-        MainContentView()
+        MainContentView(quote: viewModel.displayModel.quote, author: viewModel.displayModel.author, category: viewModel.displayModel.category)
       case .failed(let error):
         MainErrorView(error: error)
       }
@@ -29,22 +28,15 @@ struct MainScreen: View {
           await viewModel.onAppear()
         }
       }
-      footer
     }
-//    .task {
-//      await viewModel.onAppear()
-//    }
+        .task {
+          await viewModel.onAppear()
+        }
   }
   
   var header: some View {
-    Text("Header title")
+    Text("A quote for \(viewModel.displayModel.category)")
       .font(.headline)
-      .padding(20)
-  }
-  
-  var footer: some View {
-    Text("footer here")
-      .font(.caption)
       .padding(20)
   }
 }
