@@ -3,6 +3,9 @@ import Foundation
 struct MainDisplayModel {
   let id = UUID()
   let artistName: String
+  let kind: Kind
+  let wrapperType: WrapperType
+  let country: Country
 }
 
 //struct MainDisplayModel {

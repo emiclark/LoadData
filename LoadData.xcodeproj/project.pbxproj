@@ -28,6 +28,8 @@
 		D6EC430E2D74A1FA007F6A79 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC430D2D74A1F1007F6A79 /* Endpoint.swift */; };
 		D6EC43112D74A285007F6A79 /* NetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC43102D74A27E007F6A79 /* NetworkCall.swift */; };
 		D6FBE2102DCD173E005EE32B /* Artists.json in Resources */ = {isa = PBXBuildFile; fileRef = D6FBE20F2DCD1730005EE32B /* Artists.json */; };
+		D6FBE2162DCE7DE0005EE32B /* MainContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FBE2152DCE7DC9005EE32B /* MainContentDetailView.swift */; };
+		D6FBE2182DCE7F4C005EE32B /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FBE2172DCE7F38005EE32B /* ItemRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		D6EC43102D74A27E007F6A79 /* NetworkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCall.swift; sourceTree = "<group>"; };
 		D6FBE20E2DC91908005EE32B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D6FBE20F2DCD1730005EE32B /* Artists.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artists.json; sourceTree = "<group>"; };
+		D6FBE2152DCE7DC9005EE32B /* MainContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentDetailView.swift; sourceTree = "<group>"; };
+		D6FBE2172DCE7F38005EE32B /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +91,9 @@
 		D6EC42F42D74A168007F6A79 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D6EC42ED2D74A168007F6A79 /* MainContentView.swift */,
 				D6EC42EE2D74A168007F6A79 /* MainDisplayModel.swift */,
+				D6FBE2152DCE7DC9005EE32B /* MainContentDetailView.swift */,
+				D6EC42ED2D74A168007F6A79 /* MainContentView.swift */,
 				D6EC42EF2D74A168007F6A79 /* MainErrorView.swift */,
 				D6EC42F02D74A168007F6A79 /* MainIdleView.swift */,
 				D6EC42F12D74A168007F6A79 /* MainLoadingView.swift */,
@@ -146,6 +151,7 @@
 			children = (
 				D6EC42F22D74A168007F6A79 /* MainScreen.swift */,
 				D6EC42F32D74A168007F6A79 /* MainScreenViewModel.swift */,
+				D6FBE2172DCE7F38005EE32B /* ItemRow.swift */,
 				D6EC42F42D74A168007F6A79 /* Views */,
 				D6EC430B2D74A1D7007F6A79 /* Usecase */,
 				D60681C92D87646F00B2B098 /* ArtistModel.swift */,
@@ -280,6 +286,7 @@
 				D6EC42FB2D74A168007F6A79 /* MainContentView.swift in Sources */,
 				D6EC430E2D74A1FA007F6A79 /* Endpoint.swift in Sources */,
 				D6EC42FC2D74A168007F6A79 /* MainDisplayModel.swift in Sources */,
+				D6FBE2162DCE7DE0005EE32B /* MainContentDetailView.swift in Sources */,
 				D6EC42FD2D74A168007F6A79 /* MainErrorView.swift in Sources */,
 				D60681CC2D8766C300B2B098 /* ArtistData.swift in Sources */,
 				D60681C42D87513500B2B098 /* GetArtistDataSource.swift in Sources */,
@@ -291,6 +298,7 @@
 				D60681C22D8750E900B2B098 /* GetArtistRepository.swift in Sources */,
 				D6EC42FF2D74A168007F6A79 /* MainLoadingView.swift in Sources */,
 				D6EC43002D74A168007F6A79 /* MainScreen.swift in Sources */,
+				D6FBE2182DCE7F4C005EE32B /* ItemRow.swift in Sources */,
 				D6EC43012D74A168007F6A79 /* MainScreenViewModel.swift in Sources */,
 				D60681C02D8750B300B2B098 /* GetArtistUseCase.swift in Sources */,
 				D6EC43022D74A168007F6A79 /* LoadDataApp.swift in Sources */,

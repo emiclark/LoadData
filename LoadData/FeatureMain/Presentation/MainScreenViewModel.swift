@@ -44,7 +44,10 @@ extension MainScreenViewModel {
     
     for artist in source.artists {
       let mainDisplayModel = MainDisplayModel(
-        artistName: artist.artistName
+        artistName: artist.artistName,
+        kind: artist.kind,
+        wrapperType: artist.wrapperType,
+        country: artist.country
       )
       displayModelItems.append(mainDisplayModel)
     }

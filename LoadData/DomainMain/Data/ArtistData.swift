@@ -6,6 +6,13 @@ struct ArtistData: Decodable {
 
 struct Artist: Decodable {
   let artistName: String
+  let wrapperType: WrapperType
+  let country: Country
+  let kind: Kind
+}
+
+enum WrapperType: String, Codable {
+  case track = "track"
 }
 
 enum Country: String, Codable {
